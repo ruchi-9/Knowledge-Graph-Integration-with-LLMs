@@ -1,0 +1,68 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Passenger a rdfs:Class ;
+    rdfs:label "Passenger" .
+
+ex:hasAge a rdf:Property ;
+    rdfs:label "has Age" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:integer .
+
+ex:hasCabin a rdf:Property ;
+    rdfs:label "has Cabin" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:string .
+
+ex:hasClass a rdf:Property ;
+    rdfs:label "has Class" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:integer .
+
+ex:hasEmbarked a rdf:Property ;
+    rdfs:label "has Embarked" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:string .
+
+ex:hasFare a rdf:Property ;
+    rdfs:label "has Fare" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:float .
+
+ex:hasName a rdf:Property ;
+    rdfs:label "has Name" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:string .
+
+ex:hasParch a rdf:Property ;
+    rdfs:label "has Parents/Children" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:integer .
+
+ex:hasPassengerId a rdf:Property ;
+    rdfs:label "has PassengerId" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:integer .
+
+ex:hasSex a rdf:Property ;
+    rdfs:label "has Sex" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:string .
+
+ex:hasSibSp a rdf:Property ;
+    rdfs:label "has Siblings/Spouses" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:integer .
+
+ex:hasSurvived a rdf:Property ;
+    rdfs:label "has Survived" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:boolean .
+
+ex:hasTicket a rdf:Property ;
+    rdfs:label "has Ticket" ;
+    rdfs:domain ex:Passenger ;
+    rdfs:range xsd:string .
+

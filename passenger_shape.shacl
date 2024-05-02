@@ -1,0 +1,95 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/Passenger> a rdfs:Class ;
+    rdfs:label "Passenger" .
+
+<http://example.com/PassengerShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:float ;
+            sh:path <http://example.com/hasFare> ],
+        [ sh:datatype xsd:integer ;
+            sh:path <http://example.com/hasSibSp> ],
+        [ sh:datatype xsd:string ;
+            sh:path <http://example.com/hasCabin> ],
+        [ sh:datatype xsd:boolean ;
+            sh:path <http://example.com/hasSurvived> ],
+        [ sh:datatype xsd:string ;
+            sh:path <http://example.com/hasEmbarked> ],
+        [ sh:datatype xsd:string ;
+            sh:path <http://example.com/hasName> ],
+        [ sh:datatype xsd:integer ;
+            sh:path <http://example.com/hasAge> ],
+        [ sh:datatype xsd:integer ;
+            sh:path <http://example.com/hasPassengerId> ],
+        [ sh:datatype xsd:integer ;
+            sh:path <http://example.com/hasParch> ],
+        [ sh:datatype xsd:string ;
+            sh:path <http://example.com/hasTicket> ],
+        [ sh:datatype xsd:string ;
+            sh:path <http://example.com/hasSex> ],
+        [ sh:datatype xsd:integer ;
+            sh:path <http://example.com/hasClass> ] ;
+    sh:targetClass <http://example.com/Passenger> .
+
+<http://example.com/hasAge> a rdf:Property ;
+    rdfs:label "hasAge" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/hasCabin> a rdf:Property ;
+    rdfs:label "hasCabin" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:string .
+
+<http://example.com/hasClass> a rdf:Property ;
+    rdfs:label "hasClass" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/hasEmbarked> a rdf:Property ;
+    rdfs:label "hasEmbarked" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:string .
+
+<http://example.com/hasFare> a rdf:Property ;
+    rdfs:label "hasFare" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:float .
+
+<http://example.com/hasName> a rdf:Property ;
+    rdfs:label "hasName" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:string .
+
+<http://example.com/hasParch> a rdf:Property ;
+    rdfs:label "hasParch" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/hasPassengerId> a rdf:Property ;
+    rdfs:label "hasPassengerId" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/hasSex> a rdf:Property ;
+    rdfs:label "hasSex" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:string .
+
+<http://example.com/hasSibSp> a rdf:Property ;
+    rdfs:label "hasSibSp" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/hasSurvived> a rdf:Property ;
+    rdfs:label "hasSurvived" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:boolean .
+
+<http://example.com/hasTicket> a rdf:Property ;
+    rdfs:label "hasTicket" ;
+    rdfs:domain <http://example.com/Passenger> ;
+    rdfs:range xsd:string .
+

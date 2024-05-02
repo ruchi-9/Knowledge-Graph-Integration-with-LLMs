@@ -1,0 +1,90 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/PassengerShape> a sh:NodeShape ;
+    sh:property <http://example.com/hasAge>,
+        <http://example.com/hasCabin>,
+        <http://example.com/hasClass>,
+        <http://example.com/hasEmbarked>,
+        <http://example.com/hasFare>,
+        <http://example.com/hasName>,
+        <http://example.com/hasParch>,
+        <http://example.com/hasPassengerId>,
+        <http://example.com/hasSex>,
+        <http://example.com/hasSibSp>,
+        <http://example.com/hasSurvived>,
+        <http://example.com/hasTicket> ;
+    sh:targetClass <http://example.com/Passenger> .
+
+<http://example.com/hasAge> sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Age" ;
+    sh:path <http://example.com/hasAge> .
+
+<http://example.com/hasCabin> sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Cabin" ;
+    sh:path <http://example.com/hasCabin> .
+
+<http://example.com/hasClass> sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Class" ;
+    sh:path <http://example.com/hasClass> .
+
+<http://example.com/hasEmbarked> sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Embarked" ;
+    sh:path <http://example.com/hasEmbarked> .
+
+<http://example.com/hasFare> sh:datatype xsd:float ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Fare" ;
+    sh:path <http://example.com/hasFare> .
+
+<http://example.com/hasName> sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Name" ;
+    sh:path <http://example.com/hasName> .
+
+<http://example.com/hasParch> sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Parents/Children" ;
+    sh:path <http://example.com/hasParch> .
+
+<http://example.com/hasPassengerId> sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has PassengerId" ;
+    sh:path <http://example.com/hasPassengerId> .
+
+<http://example.com/hasSex> sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Sex" ;
+    sh:path <http://example.com/hasSex> .
+
+<http://example.com/hasSibSp> sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Siblings/Spouses" ;
+    sh:path <http://example.com/hasSibSp> .
+
+<http://example.com/hasSurvived> sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Survived" ;
+    sh:path <http://example.com/hasSurvived> .
+
+<http://example.com/hasTicket> sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 0 ;
+    sh:name "has Ticket" ;
+    sh:path <http://example.com/hasTicket> .
+

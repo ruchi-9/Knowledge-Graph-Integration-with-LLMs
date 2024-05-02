@@ -1,0 +1,22 @@
+@prefix ns1: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:Alice a ns1:Person ;
+    ns1:hasAge 30 ;
+    ns1:hasCity "San Francisco"^^xsd:string ;
+    ns1:hasName "Alice"^^xsd:string ;
+    ns1:hasOccupation "Manager"^^xsd:string .
+
+ns1:Bob a ns1:Person ;
+    ns1:hasAge 35,
+        45 ;
+    ns1:hasCity "Los Angeles"^^xsd:string ;
+    ns1:hasName "Bob"^^xsd:string ;
+    ns1:hasOccupation "Doctor"^^xsd:string .
+
+ns1:John_12 a ns1:Person ;
+    ns1:hasAge 25 ;
+    ns1:hasCity "New York"^^xsd:string ;
+    ns1:hasName "John 12"^^xsd:string ;
+    ns1:hasOccupation "Engineer"^^xsd:string .
+
